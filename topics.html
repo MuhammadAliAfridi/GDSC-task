@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topics</title>
+    <link rel="stylesheet" href="./css/topics.css">
+
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-image: linear-gradient(to right, #3D8196, #72BEBA);
+        }
+        .main-div {
+            position: sticky;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .h2-text {
+            margin-top: 15px;
+            color: #2c3c41;
+        }
+        .main-div ul a {
+                font-size: 16px;
+                color: #a3e7fc;
+                background-color: #145366;
+                padding: 3px;
+        }
+        .main-div ul a:focus {
+            color: #145366;
+            background-color: #a3e7fc;
+            padding-left: 7px;
+            padding-right: 7px;
+            
+        }
+        .categories {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 40px;
+            margin-top: 30px;
+            
+            
+        }
+        .categories a {
+            text-decoration: none;
+            border: 1px solid #3D8196;
+            border-radius: 4px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 4px;
+            padding-right: 4px;
+            
+
+        }
+        .whole-cards {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            height: calc(100vh - 50px);
+            gap: 40px; Added gap for space between categories */
+        /* }
+        .cards {
+            width: 20vw;
+            height: 400px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            padding: 20px;
+        }
+        .cards div {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px;
+            background-color: #cefaf6;
+            
+        }
+        .card1, .card2, .card3 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .card1 h4, .card2 h4, .card3 h4 {
+            position: absolute;
+            top: 25px;
+            left: 20px;
+            font-weight: 900;
+            font-size: large;
+            color: #145366;
+        }
+        .card1 p, .card2 p, .card3 p {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            color: #3e5860;
+        }
+        .card1 img, .card2 img, .card3 img {
+            width: 140px;
+            height: 140px;
+            position: absolute;
+            top: 120px;
+            left: 80px;
+        } */
+
+        /* Media Queries */
+        /* @media (min-width: 768px) and (max-width: 1024px) { For medium screen devices (tablets) */
+            /* .whole-cards {
+                flex-direction: row;
+                gap: 20px;
+                width: 80vw;
+            }
+            .cards { */
+                /* width: 100vw; Slightly smaller cards */
+                /* height: 1000px;
+                display: flex;
+                flex-direction: column;
+            }
+            .cards div {
+                width: 400px;
+                height: 600px;
+            }
+            .card1 img, .card2 img, .card3 img {
+                width: 170px;
+                height: 150px;
+                position: absolute;
+                top: 120px;
+                left: 110px;
+            }
+            .card1 h4, .card2 h4, .card3 h4 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: bolder;
+            font-size: 22px;
+            }
+            .card1 p, .card2 p, .card3 p {
+            position: absolute;
+            top: 53px;
+            left: 20px;
+            font-size: 16px;
+            }
+            .categories {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 23px;
+            
+            }
+            .h2-text {
+                font-size: 30px;
+                font-weight: 800;
+            }
+            .main-div ul a {
+                font-size: 20px;
+                color: #a3e7fc;
+                background-color: #145366;
+                padding-left: 5px;
+                padding-right: 5px;
+            
+        }
+        .main-div ul a:focus {
+            color: #145366;
+            background-color: #a3e7fc;
+            padding-left: 7px;
+            padding-right: 7px;
+            
+        }
+        }
+
+        @media (max-width: 768px) { For small screen devices (mobile phones) */
+            /* .whole-cards {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+            }
+            .cards {
+                width: 20vw; More space for cards */
+                /* height: 600px;
+                display: flex;
+                flex-direction: column;
+            }
+            .cards div {
+                width: 160px;
+                height: 160px;
+            }
+            .card1 img, .card2 img, .card3 img {
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                top: 75px;
+                left: 50px;
+            }
+            .card1 h4, .card2 h4, .card3 h4 {
+            position: absolute;
+            top: 16px;
+            left: 18px;
+            font-weight: 800;
+            font-size: small;
+            }
+            .card1 p, .card2 p, .card3 p {
+            position: absolute;
+            top: 35px;
+            left: 18px;
+            font-size: 10px;
+            }
+            .categories {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .main-div ul a {
+                font-size: 15px;
+                color: #a3e7fc;
+                background-color: #145366;
+                padding: 3px;
+            
+        }
+        .main-div ul a:focus {
+            color: #145366;
+            background-color: #a3e7fc;
+            padding-left: 7px;
+            padding-right: 7px;
+            
+        }
+        } */
+    </style>
+</head>
+<body>
+    <!-- navbar------------------------------ -->
+    <div class="navbar">
+        <a href="home.html"><div class="logo-home"><img class="logo-img" src="./resource/wolf.png" alt="logo"></div></a>
+        <div class="list">
+            <ul class="list2">
+                <a href="index.html"><li>Home</li></a>
+                <a href="topics.html"><li>Courses</li></a>
+                <a href="works.html"><li>How it Works</li></a>
+                <a href="form.html"><li>FAQ</li></a>
+            </ul>
+        </div>
+        <a href="home.html"><div class="sign-in">sign-in</div></a>
+    </div>
+
+
+    <!-- topics    ----------------------------------------------- -->
+    <div class="topics-main-div">
+        <div><h2 class="h2-text">Browse Topics</h2></div>
+        <div>
+            <ul class="categories">
+                <a href="#topic1"><li>Design</li></a>
+                <a href="#topic2"><li>Marketing</li></a>
+                <a href="#topic3"><li>Finance</li></a>
+                <a href="#topic4"><li>Music</li></a>
+            </ul>
+        </div>
+        <div class="whole-cards">
+            <div id="topic1" class="cards">
+                <div id="topic11" class="card1">
+                    <h4>Web Design</h4>
+                    <p>Here you will learn web design <br/> through Figma</p>
+                    <img src="./resource/web-design (2).png" alt="web Design">
+                </div>
+                <div id="topic11" class="card2">
+                    <h4>Graphic Designing</h4>
+                    <p>Lets dive deep into your <br/> imaginative world</p>
+                    <img src="./resource/web-development.png" alt="graphic design">
+                </div>
+                <div id="topic11" class="card3">
+                    <h4>Logo Design</h4>
+                    <p>Crafting unique and creative symbols</p>
+                    <img src="./resource/logo-design.png" alt="logo design">
+                </div>
+            </div>
+            <div id="topic2" class="cards">
+                <div id="topic21" class="card1">
+                    <h4>Digital Marketing</h4>
+                    <p>Here you will learn digital marketing strategies to grow your brand online.</p>
+                    <img src="./resource/digital-marketing (2).png" alt="Digital Marketing">
+                </div>
+                <div id="topic22" class="card1">
+                    <h4>Market Research</h4>
+                    <p>how to conduct market research to understand your audience</p>
+                    <img src="./resource/market-research.gif" alt="Market Research">
+                </div>
+                <div id="topic23" class="card1">
+                    <h4>Content Creation</h4>
+                    <p>create engaging content that captivates your audience</p>
+                    <img src="./resource/content-creation.png" alt="Content Creation">
+                </div>
+            </div>
+            <div id="topic3" class="cards">
+                <div id="topic31" class="card1">
+                    <h4>Investments</h4>
+                    <p>fundamentals of investments to grow your wealth and build a diverse portfolio.</p>
+                    <img src="./resource/investments.svg" alt="Investments">
+                </div>
+                <div id="topic32" class="card1">
+                    <h4>Personal Finance</h4>
+                    <p>how to manage your money, plan for the future</p>
+                    <img src="./resource/personal-finance.png" alt="Personal Finance">
+                </div>
+                <div id="topic33" class="card1">
+                    <h4>Accounting</h4>
+                    <p>principles of accounting to accurately track and manage financial transactions.</p>
+                    <img src="./resource/accounting-removebg-preview.png" alt="Accounting">
+                </div>
+            </div>
+            <div id="topic4" class="cards">
+                <div id="topic41" class="card1">
+                    <h4>Genres and Styles</h4>
+                    <p>explore various music genres and styles, from classical to modern.</p>
+                    <img src="./resource/music.png" alt="Genres and Styles">
+                </div>
+                <div id="topic42" class="card1">
+                    <h4>Instruments</h4>
+                    <p>Different musical instruments, their roles, and how creating beautiful music.</p>
+                    <img src="./resource/instruments.png" alt="Instruments">
+                </div>
+                <div id="topic43" class="card1">
+                    <h4>Music Notations</h4>
+                    <p>learn the basics of music notation to read and write music with precision and clarity.</p>
+                    <img src="./resource/musical-notations.png" alt="Music Notations">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.categories a').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
+
+    
+
+
+
+
+    
+
